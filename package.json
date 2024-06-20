@@ -1,6 +1,8 @@
 {
-  "scripts": {
-    "test": "jest --coverage",
-    "build": "webpack --config webpack.config.js"
-  }
+"devDependencies": {
+"jest": "^29.7.0"
+},
+"scripts": {
+"test": "jest --coverage"
+}
 }
