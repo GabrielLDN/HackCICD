@@ -10,18 +10,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
+    - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Set up Node.js
+    - name: Setup Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '14'  # ou a versão do Node.js que você precisa
+        node-version: 14
 
     - name: Install dependencies
-      run: npm install
+      run: |
+        npm install
+        npm install react-scripts
 
-    - name: Build project
+    - name: Build application
       run: npm run build
 
     - name: Deploy to S3
